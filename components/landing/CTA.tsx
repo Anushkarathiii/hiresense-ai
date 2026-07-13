@@ -1,61 +1,25 @@
-const features = [
-  {
-    title: "ATS Score",
-    description: "Know how well your resume performs in ATS systems.",
-  },
-  {
-    title: "Job Match",
-    description: "Match your resume against any job description.",
-  },
-  {
-    title: "AI Suggestions",
-    description: "Get personalized improvements instantly.",
-  },
-  {
-    title: "Missing Skills",
-    description: "Discover which skills recruiters expect.",
-  },
-  {
-    title: "Interview Prep",
-    description: "Generate interview questions from your resume.",
-  },
-  {
-    title: "Resume Versions",
-    description: "Track every improvement over time.",
-  },
-];
+import Link from "next/link";
 
-export default function Features() {
+export default function CTA() {
   return (
-    <section className="bg-gray-50 py-24">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="bg-black py-24 text-white">
+      <div className="mx-auto flex max-w-5xl flex-col items-center px-6 text-center">
 
-        <h2 className="text-center text-4xl font-bold">
-          Everything You Need
+        <h2 className="text-4xl font-bold">
+          Ready to Build a Resume That Gets Interviews?
         </h2>
 
-        <p className="mt-4 text-center text-gray-600">
-          Built for students preparing for placements.
+        <p className="mt-6 max-w-2xl text-lg text-gray-300">
+          Analyze your resume with AI, improve your ATS score, match job
+          descriptions, and stand out during placements.
         </p>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="rounded-2xl border bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-            >
-              <h3 className="text-xl font-semibold">
-                {feature.title}
-              </h3>
-
-              <p className="mt-3 text-gray-600">
-                {feature.description}
-              </p>
-            </div>
-          ))}
-
-        </div>
+        <Link
+          href="/dashboard"
+          className="mt-10 rounded-xl bg-white px-8 py-4 font-semibold text-black transition hover:scale-105"
+        >
+          Get Started Free
+        </Link>
 
       </div>
     </section>
